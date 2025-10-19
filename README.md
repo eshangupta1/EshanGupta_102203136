@@ -1,3 +1,60 @@
+# AI Furniture Recommendation System
+
+This is a complete **end-to-end AI/ML web application** that recommends furniture products based on user queries, generates AI-powered product descriptions, and visualizes dataset insights through an interactive UI.
+
+The project combines:
+✅ Machine Learning (model training)
+✅ NLP Embeddings
+✅ Vector Search
+✅ Generative AI
+✅ FastAPI Backend
+✅ React Frontend
+✅ Data Analytics Dashboard
+
+---
+
+## 🚀 Main Features
+
+### 🔹 1. Product Recommendation (Semantic Search)
+- Converts product text into embeddings
+- Converts user query into embedding
+- Finds similar products using vector similarity (FAISS / vector DB)
+- Supports filtering (e.g. “modern wooden table under 20000”)
+
+### 🔹 2. AI-Powered Product Descriptions
+- Generates marketing-style blurbs for each recommended product
+- Uses a local or external language model
+- Makes results readable and engaging
+
+### 🔹 3. Interactive Frontend (React)
+- `/chat` → Chat-style product recommendation interface
+- `/viz` → Analytics dashboard with charts (prices, brands, categories, etc.)
+- Built with React + Vite + Tailwind + Recharts
+
+### 🔹 4. FastAPI Backend
+- `/ingest` → Load CSV, clean data, embed products, store vectors
+- `/recommend` → Return top product matches
+- `/generate` → AI-based product description
+- `/analytics/summary` → Stats for dashboard
+- `/docs` → Auto API documentation (Swagger UI)
+
+### 🔹 5. Model Training Notebook (Required in PDF)
+- `train_models.ipynb`
+- Trains a text classification model (TF-IDF + Logistic Regression)
+- Predicts categories from product descriptions
+- Shows accuracy + confusion matrix
+- Saves trained model artifact
+
+### 🔹 6. Analytics Notebook
+- `analytics.ipynb`
+- Exploratory data analysis
+- Price distribution, top categories, brands
+- Embedding visualization or clustering (optional)
+
+---
+
+## 📂 Project Structure (Important)
+
 # FurnishAI — Fast, Self-Contained Build (Windows-ready)
 
 - FAISS default (no keys). Pinecone optional.
@@ -28,88 +85,6 @@ copy .env.example .env
 npm run dev
 ```
 Open http://localhost:5173 → Chat / Analytics.
-
-
-🚀 Main Features
-✅ 1. Content-Based Product Recommendations
-
-Converts product text (title + description) into vector embeddings.
-
-Converts user query into same embedding space.
-
-Finds most similar products (FAISS / vector search).
-
-Supports filtering by price or category.
-
-✅ 2. AI-Generated Product Descriptions
-
-Automatically writes a natural language blurb for each product.
-
-Uses a local language model or external API.
-
-Makes results more human-friendly and marketing-style.
-
-✅ 3. Analytics Dashboard
-
-Visualizes dataset insights:
-
-Top brands
-
-Top categories
-
-Price distribution
-
-Materials/colors
-
-Built with Recharts in the frontend and summary API in backend.
-
-✅ 4. Model Training Notebook (Required in PDF)
-
-train_models.ipynb trains a text classification model:
-
-TF-IDF + Logistic Regression
-
-Predicts categories from text
-
-Shows accuracy, confusion matrix
-
-Saves model artifact
-
-Demonstrates real ML training process.
-
-✅ 5. Modern Web UI
-
-React frontend with two main pages:
-
-/chat → Chat-style recommendation interface
-
-/viz → Analytics dashboard with charts
-
-Responsive design with Tailwind CSS.
-
-✅ 6. FastAPI Backend
-
-REST API endpoints:
-
-/ingest → load CSV, embed items, store vectors
-
-/recommend → return top product matches
-
-/generate → AI-generated description
-
-/analytics/summary → stats for charts
-
-✅ 7. Clean Architecture & Modular Code
-
-Separate layers:
-
-routers/ → API endpoints
-
-models/ → embedding models / ML utilities
-
-services/ → vector search, schemas, business logic
-
-Easy to maintain and extend.
 
 project/
 │
@@ -154,6 +129,57 @@ project/
 ├─ README.md                  # Project documentation (this file)
 └─ .gitignore                 # Ignore env, node_modules, etc.
 
+
+Then open browser at the shown URL:
+- `/chat` → recommendations
+- `/viz` → analytics dashboard
+
+---
+
+## 🧠 Technologies Used
+
+**Backend:** FastAPI, Python, SentenceTransformers, FAISS  
+**Frontend:** React, Vite, Tailwind CSS, Recharts  
+**ML:** Scikit-learn, Logistic Regression, embeddings  
+**Generative AI:** Local or external language model  
+**Notebooks:** Jupyter (EDA + training)
+
+---
+
+## ✅ Why This Project Stands Out
+
+✔ Full-stack AI application (not just a model)  
+✔ Real product recommendation logic  
+✔ NLP + ML + Generative AI integration  
+✔ Production-style architecture  
+✔ Easy to run and extend  
+✔ Clean modular code  
+✔ Meets all PDF requirements
+
+---
+
+## ✅ Future Enhancements (optional ideas)
+- CLIP-based image similarity
+- Personalized recommendations
+- Cross-encoder reranking
+- User feedback loop
+- Cloud deployment
+
+---
+
+## 🎯 Summary
+
+This project demonstrates the complete lifecycle of an AI-powered product recommendation system:
+**Data → Embeddings → ML training → Vector search → Generative AI → Web App → Analytics**
+
+It showcases strong skills in:
+✅ Machine Learning  
+✅ NLP / AI  
+✅ Backend engineering  
+✅ Frontend development  
+✅ System design  
+
+**Perfect for real-world applications and interview evaluation.**
 
 ✅ End-to-End Flow
 
